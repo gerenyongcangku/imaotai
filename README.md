@@ -118,6 +118,6 @@ python3 main.py
 
 ## 以上内容为原文件提供者更新，以下是个人说明。
 
-上面写的方法当然是通用的，但是在docker内使用有一定的区别，首先要连接到你的服务器，执行docker exec -it *** bash 这个命令进入到容器内，***是你当初安装容器时候定义的名字，我的容器就是QL，所以执行的是docker exec -it QL bash。然后执行cd data/scripts/dongyazhuo_imaotai/进入到imaotai的目录内，这是之前导入别人的脚本，之后可以导入自己脚本，改最后的相应位置。
-先执行 python login.py进行账号配置，然后返回青龙主界面定时任务处添加定时任务，task dongyazhuo_imaotai/main.py，同理目录名记得同步更新，添加定时任务时间不要太集中靠前，毕竟同时人太多了有失败风险，还怕失败可以多定义2次。push推送记得看，cookie不是长期有效的。
+上面写的方法当然是通用的，但是在docker内使用有一定的区别，第一步要订阅同步一下脚本到你的服务器里，青龙面板主界面订阅添加https://github.com/gerenyongcangku/imaotai.git，定时随意执行一次，然后删掉系统自动配置的5个定时脚本。然后用软件连接到你的服务器，这个看个人喜好及常用工具，执行docker exec -it *** bash 这个命令进入到容器内，***是你当初安装容器时候定义的名字，我的容器就是QL，所以执行的是docker exec -it QL bash。然后执行cd data/scripts/gerenyongcangku_imaotai/进入到imaotai的目录内，可以导入自己脚本，改最后的相应位置。
+先执行 python login.py进行账号配置，然后返回青龙主界面定时任务处添加定时任务，task gerenyongcangku_imaotai/main.py，同理目录名记得同步更新，添加定时任务时间不要太集中靠前，毕竟同时人太多了有失败风险，还怕失败可以多定义2次。push推送记得看，cookie不是长期有效的。
 
